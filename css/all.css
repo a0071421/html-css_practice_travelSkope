@@ -92,15 +92,15 @@ body {
 
 /* 漢堡選單變化 */
 
-.showmenu.show span:first-child {
+.showmenu.open span:first-child {
   opacity: 0;
 }
 
-.showmenu.show span:nth-child(2) {
+.showmenu.open span:nth-child(2) {
   transform: rotate(220deg);
 }
 
-.showmenu.show span:last-child {
+.showmenu.open span:last-child {
   transform: rotate(-220deg);
 }
 
