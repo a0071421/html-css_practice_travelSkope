@@ -2,6 +2,12 @@ html,
 body {
   height: 100%;
 }
+
+/* wrap */
+.wrap {
+  overflow-x: hidden;
+}
+
 /* header */
 
 .header {
@@ -56,7 +62,7 @@ body {
 }
 
 /* 選單三條線 */
-.header .showmenu span {
+.showmenu span {
   display: block;
   width: 30px;
   height: 4px;
@@ -71,18 +77,31 @@ body {
 }
 
 /* second line */
-.header .showmenu span:nth-child(1) {
+.showmenu span:nth-child(1) {
   width: 15px;
 }
 
-/* top line */
-.header .showmenu span:nth-child(2) {
+.showmenu span:nth-child(2) {
   transform: translateY(-10px);
 }
 
 /* bottom line */
-.header .showmenu span:last-child {
+.showmenu span:last-child {
   transform: translateY(10px);
+}
+
+/* 漢堡選單變化 */
+
+.showmenu.show span:first-child {
+  opacity: 0;
+}
+
+.showmenu.show span:nth-child(2) {
+  transform: rotate(220deg);
+}
+
+.showmenu.show span:last-child {
+  transform: rotate(-220deg);
 }
 
 /* menu */
@@ -107,7 +126,8 @@ body {
 }
 
 .menu .menu-link:hover,
-.menu .menu-link:focus {
+.menu .menu-link:focus,
+.menu .menu-link.active {
   color: #343434;
   border-bottom: 3px solid #907273;
 }
@@ -124,7 +144,7 @@ body {
 
 @media (min-width: 768px) {
   .banner {
-    height: 600px;
+    height: 500px;
   }
 }
 
@@ -165,7 +185,7 @@ body {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .content-list .content-item {
     width: 25%;
     margin-bottom: 0px;
